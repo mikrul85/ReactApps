@@ -4,23 +4,9 @@ import './table.css'
 class Table extends Component {
 
   state = {
-    data: [{
-      Channel: null,
-      Date: '',
-      ['Media Source']: null,
-      ADS_FIVE_WATCHED: null,
-      ADS_VIDEOAD_WATCHED: null,
-      Add_Friend_Request: null}],
-      sortValue: "ASC",
-      sortField: ""
-  }
-
-  componentDidMount() {
-      this.setState((state) => {
-        return {
-          data: this.props.data
-        }
-      })
+    data: this.props.data,
+    sortValue: "ASC",
+    sortField: ""
   }
 
   componentDidUpdate(previousProps) {
